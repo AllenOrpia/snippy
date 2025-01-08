@@ -5,7 +5,7 @@ import connect from "../mongodb/connect";
 export const createOrUpdateUser = async (
   id: string,
   email_address: string,
-  username: string 
+  username: string | null
 ) => {
 
     try {
