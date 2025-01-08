@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema(
             type: String, unique: true, required: true
         },
         email: {
-            type: String, unique: true, required: true, max: 50
+            type: String, required: true, max: 50
         },
         name: {
             type: String, min: 2, max: 50
@@ -20,5 +20,5 @@ const UserSchema = new mongoose.Schema(
     }
 );
 
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.models.User || mongoose.model("User", UserSchema);
 export default User;
