@@ -3,9 +3,9 @@ import User from "../models/Users";
 import connect from "../mongodb/connect";
 
 export const createOrUpdateUser = async (
-  id: String,
-  email_address: String,
-  username: String 
+  id: string,
+  email_address: string,
+  username: string 
 ) => {
 
     try {
@@ -34,7 +34,7 @@ export const createOrUpdateUser = async (
 };
 
 
-export const deleteUser = async (id: String | undefined) => {
+export const deleteUser = async (id: string | undefined) => {
     try {
         await connect();
 
